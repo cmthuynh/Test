@@ -1,7 +1,7 @@
 import numpy
 
-x = numpy.random.randint(0,100,100)
-y = numpy.random.randint(0,100,100)
+x = numpy.random.randint(0,10000,100)
+y = numpy.random.randint(0,10000,100)
 value = 0
 for i in range(99):
     j=i+1
@@ -12,7 +12,7 @@ for i in range(99):
             continue
         count = 0
         for k in range(100):
-            if(b*(x[k]-x[i])-a*(y[k]-x[i])==0):
+            if b*(x[k]-x[i])-a*(y[k]-y[i]) == 0:
                 count=count + 1
         if value <= count:
             bf=b
