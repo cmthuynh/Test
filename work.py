@@ -1,8 +1,11 @@
 import numpy
 
+#overload warning if x,y over 100000. 
 x = numpy.random.randint(0,10000,100)
 y = numpy.random.randint(0,10000,100)
+
 value = 0
+
 for i in range(99):
     j=i+1
     for j in range(100):
@@ -20,5 +23,6 @@ for i in range(99):
             xf=x[i]
             yf=y[i]
             value = count
+
 print '0 =',bf,'*(x -',xf,')','-',af,'*(y -',yf,')'
 print 'it goes through',value,'points'
