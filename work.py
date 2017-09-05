@@ -24,7 +24,7 @@ for i in range(99):
             xf=x[i]
             yf=y[i]
             xi=x[j]
-            yi=y[i]
+            yi=y[j]
             value = count
 
 print ('0 =',bf,'*(x -',xf,')','-',af,'*(y -',yf,')')
