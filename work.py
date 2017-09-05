@@ -1,8 +1,9 @@
 import numpy
+from matplotlib import pyplot as plt
 
 #overload warning if x,y over 100000. 
-x = numpy.random.randint(0,10000,100)
-y = numpy.random.randint(0,10000,100)
+x = numpy.random.randint(0,100,100)
+y = numpy.random.randint(0,100,100)
 
 value = 0
 
@@ -22,7 +23,14 @@ for i in range(99):
             af=a
             xf=x[i]
             yf=y[i]
+            xi=x[j]
+            yi=y[i]
             value = count
 
-print '0 =',bf,'*(x -',xf,')','-',af,'*(y -',yf,')'
-print 'it goes through',value,'points'
+print ('0 =',bf,'*(x -',xf,')','-',af,'*(y -',yf,')')
+print ('it goes through',value,'points')
+
+plt.plot(x,y,'ro')
+plt.plot([xf,yf],[xi,yi],color='k',marker='o')
+plt.axis([0,100,0,100])
+plt.show()
