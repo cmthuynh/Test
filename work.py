@@ -2,8 +2,8 @@ import numpy
 from matplotlib import pyplot as plt
 
 #overload warning if x,y over 100000. 
-x = numpy.random.randint(0,100,100)
-y = numpy.random.randint(0,100,100)
+x = numpy.random.randint(0,10000,100)
+y = numpy.random.randint(0,10000,100)
 
 value = 0
 
@@ -32,5 +32,5 @@ print ('it goes through',value,'points')
 
 plt.plot(x,y,'ro')
 plt.plot([xf,yf],[xi,yi],color='k',marker='o')
-plt.axis([0,100,0,100])
+plt.axis([0,10000,0,10000])
 plt.show()
